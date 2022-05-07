@@ -1,0 +1,17 @@
+{% extends 'registration/authorization.html' %}
+
+{% block content %}
+    <div class="center">
+        <div class="login-form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <h1>Вход</h1>
+                {{ form.as_p }}
+                <div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </div>
+                <a class="btn btn-primary" href="{% url 'register' %}" role="button">Зарегистрироваться</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
